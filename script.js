@@ -1,8 +1,7 @@
-let num1 = 0;
-let num2 = 0; 
 document.getElementById("Aumentar").addEventListener("click", function(){
-    if (texto){
-        const span = document.
+    const span2 = document.getElementById('num2');
+    if (span2<10){
+        span2.textContent += 1;
         li.textContent = texto;
         document.getElementById("lista-tareas").appendChild(li)
         input.value = ""
