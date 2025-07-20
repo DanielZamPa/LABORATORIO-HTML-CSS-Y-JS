@@ -1,17 +1,19 @@
-document.getElementById("Aumentar").addEventListener("click", function(){
-    const span2 = document.getElementById('num2');
-    if (span2<10){
-        span2.textContent += 1;
-        li.textContent = texto;
-        document.getElementById("lista-tareas").appendChild(li)
-        input.value = ""
+let num = 0;
+const spanNum = document.getElementById('num');
+function actualizar(){
+    document.getElementById('num').textContent = num
+    if (num>=10){
+        spanNum.style.color = '#44BBA4';
     }
+    else{
+        spanNum.style.color = '#000000';
+    }
+}
+document.getElementById("Aumentar").addEventListener("click", function(){
+    num += 1;
+    actualizar();    
 })
 document.getElementById("Disminuir").addEventListener("click", function(){    
-    if (texto){
-        
-        li.textContent = texto;
-        document.getElementById("lista-tareas").appendChild(li)
-        input.value = ""
-    }
+        num -= 1;
+        actualizar();
 })
