@@ -1,19 +1,20 @@
-let num = 0;
+let num1 = 0;
+let num2 = 0;
 const spanNum = document.getElementById('num');
 function actualizar(){
-    document.getElementById('num').textContent = num
-    if (num>=10){
-        spanNum.style.color = '#44BBA4';
+    if (num2>9){
+        spanNum.style.color = '#44BBA4';        
     }
     else{
+        document.getElementById('num2').textContent = num2
         spanNum.style.color = '#000000';
     }
 }
 document.getElementById("Aumentar").addEventListener("click", function(){
-    num += 1;
-    actualizar();    
+    num2 += 1;
+    actualizar();
 })
 document.getElementById("Disminuir").addEventListener("click", function(){    
-        num -= 1;
+        num2 -= 1;
         actualizar();
 })
